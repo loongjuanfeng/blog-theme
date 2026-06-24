@@ -6,8 +6,8 @@ license = "MIT"
 licenselink = "https://github.com/Masellum/hugo-theme-nostyleplease/blob/main/LICENSE"
 description = "a (nearly) no-CSS, fast, minimalist Hugo theme ported from riggraz/no-style-please."
 homepage = "https://github.com/Masellum/hugo-theme-nostyleplease"
-tags = ["blog", "minimalist"]
-features = []
+tags = ["blog", "minimalist", "cjk"]
+features = ["CJK typography"]
 min_version = "0.158.0"
 
 [author]
