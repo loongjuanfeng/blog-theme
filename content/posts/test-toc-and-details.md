@@ -15,7 +15,7 @@ To enable it, all you need to do when creating a new post at the very top is to 
 toc = true
 tocBorder = true
 ```
-You can of course find this post (../themes/nostyleplease/content/posts/test-toc-and-details.md) and open in editor to see how it's working.
+You can of course find this post (../themes/blog-theme/content/posts/test-toc-and-details.md) and open in editor to see how it's working.
 
 ## Details
 ### What it is?
@@ -24,14 +24,14 @@ It's HTML standard sadly not supported native by markdown. But this theme suppor
 A lot of text or something else.
 {{< /details >}}
 ### How to use "Details"?
-Well you need to inspect this post and see by yourself. It's very easy. Take look at ../themes/nostyleplease/content/posts/test-toc-and-details.md.
+Well you need to inspect this post and see by yourself. It's very easy. Take look at ../themes/blog-theme/content/posts/test-toc-and-details.md.
 
 ## Styles
 Okey. So if you want to change color-theme you can:
-- go to ../themes/nostyleplease/config.toml and find:
+- go to ../themes/blog-theme/config.toml and find:
 
   ```toml
   appearance = "auto"
   ```
   you can change it to 2 predefined styles: **light** and **dark**. It can be also set to **auto** and the color scheme will match the user's system style.
-- you can add new style or modify **auto** option, just edit CSS in ../themes/nostyleplease/assets/css/main.css :-). It's easy, if you are able to operate Hugo - you can do it.
+- you can add new style or modify **auto** option, just edit CSS in ../themes/blog-theme/assets/css/main.css :-). It's easy, if you are able to operate Hugo - you can do it.

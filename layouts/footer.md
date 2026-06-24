@@ -1,2 +1,2 @@
 This is footer.
-You can edit this in ../nostyleplease/layouts/footer.md
+You can edit this in ../blog-theme/layouts/footer.md

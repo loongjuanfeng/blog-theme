@@ -72,7 +72,7 @@ Now a table:
 
 ## Images
 
-![theme logo](https://raw.githubusercontent.com/Masellum/hugo-theme-nostyleplease/main/logo.png)
+![theme logo](https://raw.githubusercontent.com/loongjuanfeng/blog-theme/main/logo.png)
 {.ioda}
 
 Logo of *no style, please!* theme[^4]

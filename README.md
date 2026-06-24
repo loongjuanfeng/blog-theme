@@ -1,8 +1,8 @@
-# no style, please!
+# blog-theme
 
-<img src="https://raw.githubusercontent.com/hanwenguo/hugo-theme-nostyleplease/main/logo.png" width="64" align="left" />A (nearly) no-CSS, fast, minimalist [Hugo](https://gohugo.io/) theme ported from [riggraz/no-style-please](https://github.com/riggraz/no-style-please/).
+<img src="https://raw.githubusercontent.com/loongjuanfeng/blog-theme/main/logo.png" width="64" align="left" />A fast, minimalist [Hugo](https://gohugo.io/) blog theme forked from [no-style-please](https://github.com/riggraz/no-style-please/) with modern Hugo APIs and CJK typography.
 
-<img src="https://raw.githubusercontent.com/hanwenguo/hugo-theme-nostyleplease/main/images/screenshot-both.png" />
+<img src="https://raw.githubusercontent.com/loongjuanfeng/blog-theme/main/images/screenshot-both.png" />
 
 ## Features
 
@@ -13,10 +13,11 @@
 * RSS feed (using Hugo's embedded RSS template)
 * MathJax support
 * Supporting details HTML tag
+* CJK typography support
 
 ## Installation
 
-The easiest way is to clone this repo (or add as a submodule) to themes/nostyleplease then append `theme = 'nostyleplease'` as a newline to config.toml. Pages shipped with theme as examples have `draft: true` in their frontmatters, use `--buildDrafts` to build them.
+The easiest way is to clone this repo (or add as a submodule) to `themes/blog-theme` then append `theme = 'blog-theme'` as a newline to config.toml. Pages shipped with theme as examples have `draft: true` in their frontmatters, use `--buildDrafts` to build them.
 
 ## Usage
 
@@ -51,7 +52,7 @@ The `index.md` page should use layout `home`, which is the layout that displays 
 
 Another thing you can do to customize the index page is show the description of your blog between the title and the menu. To do this, just edit `config.toml` and change `params.theme_config.show_description` to `true`.
 
-You can also add footer. Just edit ..nostyleplease/layouts/footer.md.
+You can also add footer. Just edit `themes/blog-theme/layouts/footer.md`.
 ### Adding table of contents
 
 You can add a table of contents by supplying the `toc: true` param to your post front matter. If you want a border around it you can also set `tocBorder: true`. The toc style behavior is handled by Goldmark and the defaults can be found in the `config.toml` file.
@@ -85,11 +86,11 @@ For example, if you have a black and white image it could make sense to invert i
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/hanwenguo/hugo-theme-nostyleplease/.
+Bug reports and pull requests are welcome on GitHub at https://github.com/loongjuanfeng/blog-theme/.
 
 ## Thanks
 
-Some of the code comes from [wooseopkim/hugo-theme-nostyleplease](https://github.com/wooseopkim/hugo-theme-nostyleplease), a fork of this theme.
+This theme is forked from [Masellum/hugo-theme-nostyleplease](https://github.com/Masellum/hugo-theme-nostyleplease), which ports [riggraz/no-style-please](https://github.com/riggraz/no-style-please). Some of the code comes from [wooseopkim/hugo-theme-nostyleplease](https://github.com/wooseopkim/hugo-theme-nostyleplease).
 
 Some of the test pages are from [this jekyll theme](https://github.com/huangyz0918/moving).
 
