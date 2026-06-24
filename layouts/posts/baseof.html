@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ $.Site.LanguageCode }}">
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction "ltr" }}">
     {{- partial "head.html" . -}}
-    <body a="{{ $.Site.Params.theme_config.appearance | default "auto" }}">
+    <body a="{{ site.Params.theme_config.appearance | default "auto" }}">
         <main class="page-content" aria-label="Content">
             <div class="w">
                 <div class="post-meta">
                     {{ partial "back_link.html" .}}
                     <p>
-                        <time datetime="{{ .Date }}">
+                        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                             {{ .Date | time.Format site.Params.theme_config.date_format }}
                         </time>
                     </p>
@@ -16,10 +16,11 @@
             </div>
         </main>
     </body>
-    {{- if .Params.custom_js -}}
-        {{- range .Params.custom_js -}}
-            {{ $js := resources.Get (print "js/" . ".js") }}
-            <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+    {{- with .Params.custom_js -}}
+        {{- range . -}}
+            {{- with resources.Get (printf "js/%s.js" .) }}
+            <script src="{{ .RelPermalink }}"></script>
+            {{- end -}}
         {{- end -}}
     {{- end -}}
 </html>

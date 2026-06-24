@@ -34,4 +34,4 @@ Okey. So if you want to change color-theme you can:
   appearance = "auto"
   ```
   you can change it to 2 predefined styles: **light** and **dark**. It can be also set to **auto** and the color scheme will match the user's system style.
-- you can add new style or modify **auto** option, just edit CSS in ../themes/nostyleplease/assets/main.scss :-). It's easy, if you are able to operate Hugo - you can do it.
+- you can add new style or modify **auto** option, just edit CSS in ../themes/nostyleplease/assets/css/main.css :-). It's easy, if you are able to operate Hugo - you can do it.

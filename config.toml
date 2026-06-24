@@ -1,10 +1,13 @@
 [module]
   [module.hugoVersion]
-    extended = true
-    min      = "0.41.0"
+    extended = false
+    min      = "0.158.0"
 
 [markup]
   [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
     [markup.goldmark.parser]
       [markup.goldmark.parser.attribute]
         block = true

@@ -8,7 +8,7 @@ description = "a (nearly) no-CSS, fast, minimalist Hugo theme ported from riggra
 homepage = "https://github.com/Masellum/hugo-theme-nostyleplease"
 tags = ["blog", "minimalist"]
 features = []
-min_version = "0.41.0"
+min_version = "0.158.0"
 
 [author]
   name = "Masellum"

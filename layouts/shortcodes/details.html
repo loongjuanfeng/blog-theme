@@ -2,5 +2,5 @@
     <summary>
         {{ .Get "summary" | default "Details:" }}
     </summary>
-    {{ .Inner | markdownify }}
+    {{ .Inner | strings.TrimSpace | .Page.RenderString }}
 </details>
