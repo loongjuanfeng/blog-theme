@@ -60,6 +60,19 @@ You can add a table of contents by supplying the `toc: true` param to your post 
 
 just edit `config.toml` and change `params.theme_config.isListGroupByDate` to `true`.
 
+### Chinese typography
+
+The theme includes language-sensitive Chinese typography rules based on [W3C CLReq](https://www.w3.org/TR/clreq/) web layout practice: stricter CJK line breaking, taller body line-height, Chinese quotation marks, and safer wrapping. For Chinese sites, set the site language so these rules can apply:
+
+```toml
+hasCJKLanguage = true
+defaultContentLanguage = 'zh-cn'
+
+[languages.zh-cn]
+  locale = 'zh-CN'
+  direction = 'ltr'
+```
+
 ### Pro tips
 
 #### Dark mode for images

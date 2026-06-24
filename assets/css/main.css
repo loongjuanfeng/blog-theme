@@ -242,7 +242,7 @@ html {
 }
 
 body {
-  font-family: monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 16px;
   line-height: 1.4;
   margin: 0;
@@ -321,6 +321,31 @@ code.has-jax {
   background: inherit !important;
   border: none !important;
   font-size: 100%;
+}
+
+:lang(zh) {
+  hanging-punctuation: allow-end;
+  line-break: strict;
+  overflow-wrap: break-word;
+  quotes: "“" "”" "‘" "’";
+  word-break: normal;
+}
+
+body:lang(zh) {
+  line-height: 1.8;
+}
+
+:lang(zh) h1,
+:lang(zh) h2,
+:lang(zh) h3,
+:lang(zh) h4,
+:lang(zh) h5,
+:lang(zh) h6 {
+  line-height: 1.35;
+}
+
+:lang(zh) a {
+  text-underline-offset: 0.18em;
 }
 
 blockquote {

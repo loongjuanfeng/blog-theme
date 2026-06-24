@@ -1,3 +1,5 @@
+hasCJKLanguage = true
+
 [module]
   [module.hugoVersion]
     extended = false
