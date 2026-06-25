@@ -11,7 +11,7 @@
 * Responsive
 * Content first (typography optimized for maximum readability)
 * RSS feed (using Hugo's embedded RSS template)
-* MathJax support
+* KaTeX math support
 * Supporting details HTML tag
 * CJK typography support
 
@@ -56,6 +56,10 @@ You can also add footer. Just edit `themes/blog-theme/layouts/footer.md`.
 ### Adding table of contents
 
 You can add a table of contents by supplying the `toc: true` param to your post front matter. If you want a border around it you can also set `tocBorder: true`. The toc style behavior is handled by Goldmark and the defaults can be found in the `config.toml` file.
+
+### Math support
+
+Enable KaTeX rendering on a post by adding `math: true` to its front matter. Inline formulas can use `$...$`, `\(...\)` or the `texi` shortcode; display formulas can use `$$...$$`, `\[...\]` or the `texd` shortcode. Existing posts that use `mathjax: true` will continue to load the math renderer.
 
 ### Posts list group by date in descending order.
 

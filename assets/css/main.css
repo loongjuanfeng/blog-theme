@@ -316,11 +316,14 @@ code:not(pre > code) {
   font-size: 90%;
 }
 
-code.has-jax {
-  -webkit-font-smoothing: antialiased;
-  background: inherit !important;
-  border: none !important;
-  font-size: 100%;
+.math-display,
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.katex {
+  font-size: 1em;
 }
 
 :lang(zh) {

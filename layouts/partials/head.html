@@ -20,5 +20,5 @@
     {{ $style := . | resources.Minify | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" />
   {{ end }}
-  {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
+  {{ if or .Params.math .Params.mathjax }} {{ partial "math.html" . }} {{ end }}
 </head>

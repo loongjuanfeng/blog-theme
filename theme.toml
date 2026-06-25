@@ -7,7 +7,7 @@ licenselink = "https://github.com/loongjuanfeng/blog-theme/blob/main/LICENSE"
 description = "A fast, minimalist Hugo blog theme forked from no-style-please with modern Hugo APIs and CJK typography."
 homepage = "https://github.com/loongjuanfeng/blog-theme"
 tags = ["blog", "minimalist", "cjk"]
-features = ["CJK typography"]
+features = ["CJK typography", "KaTeX math"]
 min_version = "0.158.0"
 
 [author]
