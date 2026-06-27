@@ -1,19 +1,26 @@
+{{- $context := .context -}}
+{{- with .collection }}
 <ul>
-    {{- range $item := .collection -}}
+    {{- range $item := . -}}
         <li>
             {{- with $item.url -}}
                 <a href="{{ . | relURL }}">{{ $item.title | safeHTML }}</a>
             {{- else -}}
                 {{ $item.title | safeHTML }}
             {{- end -}}
+
+            {{- with $item.entries }}
+                {{ partial "menu_item.html" (dict "context" $context "collection" .) }}
+            {{- end -}}
+
+            {{- with $item.post_list -}}
+                {{- if reflect.IsMap . -}}
+                    {{ partial "post_list.html" (dict "context" $context "section" .section "limit" .limit "show_more" .show_more "show_more_text" .show_more_text "show_more_url" .show_more_url) }}
+                {{- else -}}
+                    {{ partial "post_list.html" (dict "context" $context) }}
+                {{- end -}}
+            {{- end -}}
         </li>
-
-        {{- if $item.entries }}
-            {{ partial "menu_item.html" (dict "context" . "collection" $item.entries) }}
-        {{- end -}}
-
-        {{- if $item.post_list -}}
-            {{ partial "post_list.html" (dict "context" . "section" $item.post_list.section "limit" $item.post_list.limit "show_more" $item.post_list.show_more "show_more_text" $item.post_list.show_more_text "show_more_url" $item.post_list.show_more_url) -}}
-        {{- end -}}
     {{- end -}}
 </ul>
+{{- end }}

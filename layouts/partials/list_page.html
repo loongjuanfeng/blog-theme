@@ -1,0 +1,7 @@
+{{- $context := .context -}}
+{{- partial "back_link.html" $context -}}
+
+<h1>{{ $context.Title }}</h1>
+
+{{ $context.Content }}
+{{ partial "post_list.html" (dict "context" $context "section" .section) }}

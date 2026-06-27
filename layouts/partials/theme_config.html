@@ -1,0 +1,21 @@
+{{- $config := site.Params.theme_config | default dict -}}
+{{- $isShowFooter := true -}}
+{{- if isset $config "isshowfooter" -}}
+    {{- $isShowFooter = index $config "isshowfooter" -}}
+{{- end -}}
+{{- $isListGroupByDate := false -}}
+{{- if isset $config "islistgroupbydate" -}}
+    {{- $isListGroupByDate = index $config "islistgroupbydate" -}}
+{{- end -}}
+{{- $showDescription := false -}}
+{{- if isset $config "show_description" -}}
+    {{- $showDescription = index $config "show_description" -}}
+{{- end -}}
+{{- return (dict
+    "appearance" ($config.appearance | default "auto")
+    "backHomeText" ($config.back_home_text | default "..")
+    "dateFormat" ($config.date_format | default "2006-01-02")
+    "isListGroupByDate" $isListGroupByDate
+    "isShowFooter" $isShowFooter
+    "showDescription" $showDescription
+) -}}

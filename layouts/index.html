@@ -1,8 +1,9 @@
 {{ define "main" }}
+{{- $config := partial "theme_config.html" . -}}
 
 <header>
     <h1>{{ site.Title }}</h1>
-    {{- if site.Params.theme_config.show_description -}}
+    {{- if $config.showDescription -}}
         <p>{{ site.Params.description }}</p>
     {{- end -}}
 </header>

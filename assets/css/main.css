@@ -1,237 +1,54 @@
 /* -------------- THEME SWITCHER -------------- */
-body[a="dark"] {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-body[a="dark"] a {
-  color: #79a8ff;
-}
-
-body[a="dark"] a:visited {
-  color: #f78fe7;
-}
-
-body[a="dark"] details {
-  border: thin solid #ffffff;
-}
-
-body[a="dark"] details summary {
-  color: #ffffff;
-}
-
-body[a="dark"] details[open] summary {
-  border-bottom: 1px solid #ffffff;
-}
-
-body[a="dark"] pre {
-  background: #000000;
-}
-
-body[a="dark"] code:not(pre > code) {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body[a="dark"] *:target {
-  background: #2f3849;
-  color: #ffffff;
-}
-
-body[a="dark"] table,
-body[a="dark"] th,
-body[a="dark"] td {
-  border: thin solid #ffffff;
-}
-
-body[a="dark"] .toc {
-  border: thin solid #ffffff;
-  padding: 1rem;
-}
-
-body[a="dark"] figcaption {
-  color: #000000;
-}
-
-body[a="dark"] blockquote {
-  border: thin solid #ffffff;
-}
-
+:root,
 body[a="light"] {
-  background-color: #ffffff;
-  color: #000000;
+  --color-background: #ffffff;
+  --color-text: #000000;
+  --color-link: #3548cf;
+  --color-link-visited: #8f0075;
+  --color-border: #000000;
+  --color-inline-code-background: #000000;
+  --color-inline-code-text: #ffffff;
+  --color-target-background: #dae5ec;
+  --color-figcaption: #595959;
 }
 
-body[a="light"] a {
-  color: #3548cf;
-}
-
-body[a="light"] a:visited {
-  color: #8f0075;
-}
-
-body[a="light"] details {
-  border: thin solid #000000;
-}
-
-body[a="light"] details summary {
-  color: #000000;
-}
-
-body[a="light"] details[open] summary {
-  border-bottom: 1px solid #000000;
-}
-
-body[a="light"] pre {
-  background: #ffffff;
-}
-
-body[a="light"] code:not(pre > code) {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-body[a="light"] *:target {
-  background: #dae5ec;
-  color: #000000;
-}
-
-body[a="light"] table,
-body[a="light"] th,
-body[a="light"] td {
-  border: thin solid #000000;
-}
-
-body[a="light"] .toc {
-  border: thin solid #000000;
-  padding: 1rem;
-}
-
-body[a="light"] figcaption {
-  color: #595959;
-}
-
-body[a="light"] blockquote {
-  border: thin solid #000000;
+body[a="dark"] {
+  --color-background: #000000;
+  --color-text: #ffffff;
+  --color-link: #79a8ff;
+  --color-link-visited: #f78fe7;
+  --color-border: #ffffff;
+  --color-inline-code-background: #ffffff;
+  --color-inline-code-text: #000000;
+  --color-target-background: #2f3849;
+  --color-figcaption: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   body[a="auto"] {
-    background-color: #000000;
-    color: #ffffff;
-  }
-
-  body[a="auto"] a {
-    color: #79a8ff;
-  }
-
-  body[a="auto"] a:visited {
-    color: #f78fe7;
-  }
-
-  body[a="auto"] details {
-    border: thin solid #ffffff;
-  }
-
-  body[a="auto"] details summary {
-    color: #ffffff;
-  }
-
-  body[a="auto"] details[open] summary {
-    border-bottom: 1px solid #ffffff;
-  }
-
-  body[a="auto"] pre {
-    background: #000000;
-  }
-
-  body[a="auto"] code:not(pre > code) {
-    background-color: #ffffff;
-    color: #000000;
-  }
-
-  body[a="auto"] *:target {
-    background: #2f3849;
-    color: #ffffff;
-  }
-
-  body[a="auto"] table,
-  body[a="auto"] th,
-  body[a="auto"] td {
-    border: thin solid #ffffff;
-  }
-
-  body[a="auto"] .toc {
-    border: thin solid #ffffff;
-    padding: 1rem;
-  }
-
-  body[a="auto"] figcaption {
-    color: #000000;
-  }
-
-  body[a="auto"] blockquote {
-    border: thin solid #ffffff;
+    --color-background: #000000;
+    --color-text: #ffffff;
+    --color-link: #79a8ff;
+    --color-link-visited: #f78fe7;
+    --color-border: #ffffff;
+    --color-inline-code-background: #ffffff;
+    --color-inline-code-text: #000000;
+    --color-target-background: #2f3849;
+    --color-figcaption: #000000;
   }
 }
 
 @media (prefers-color-scheme: light) {
   body[a="auto"] {
-    background-color: #ffffff;
-    color: #000000;
-  }
-
-  body[a="auto"] a {
-    color: #3548cf;
-  }
-
-  body[a="auto"] a:visited {
-    color: #8f0075;
-  }
-
-  body[a="auto"] details {
-    border: thin solid #000000;
-  }
-
-  body[a="auto"] details summary {
-    color: #000000;
-  }
-
-  body[a="auto"] details[open] summary {
-    border-bottom: 1px solid #000000;
-  }
-
-  body[a="auto"] pre {
-    background: #ffffff;
-  }
-
-  body[a="auto"] code:not(pre > code) {
-    background-color: #000000;
-    color: #ffffff;
-  }
-
-  body[a="auto"] *:target {
-    background: #dae5ec;
-    color: #000000;
-  }
-
-  body[a="auto"] table,
-  body[a="auto"] th,
-  body[a="auto"] td {
-    border: thin solid #000000;
-  }
-
-  body[a="auto"] .toc {
-    border: thin solid #000000;
-    padding: 1rem;
-  }
-
-  body[a="auto"] figcaption {
-    color: #595959;
-  }
-
-  body[a="auto"] blockquote {
-    border: thin solid #000000;
+    --color-background: #ffffff;
+    --color-text: #000000;
+    --color-link: #3548cf;
+    --color-link-visited: #8f0075;
+    --color-border: #000000;
+    --color-inline-code-background: #000000;
+    --color-inline-code-text: #ffffff;
+    --color-target-background: #dae5ec;
+    --color-figcaption: #595959;
   }
 }
 
@@ -242,6 +59,8 @@ html {
 }
 
 body {
+  background-color: var(--color-background);
+  color: var(--color-text);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 16px;
   line-height: 1.4;
@@ -267,11 +86,21 @@ li {
 }
 
 a {
+  color: var(--color-link);
   text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-link-visited);
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+*:target {
+  background: var(--color-target-background);
+  color: var(--color-text);
 }
 
 hr {
@@ -289,6 +118,7 @@ hr:after {
 }
 
 pre {
+  background: var(--color-background);
   padding: 1em;
   overflow-x: auto; /* Fix pre content overflowing parent without scroll bar */
 }
@@ -300,6 +130,7 @@ table {
 table,
 th,
 td {
+  border: thin solid var(--color-border);
   border-collapse: collapse;
   padding: 0.4rem;
 }
@@ -312,6 +143,8 @@ code {
 }
 
 code:not(pre > code) {
+  background-color: var(--color-inline-code-background);
+  color: var(--color-inline-code-text);
   padding: 0.1em 0.2em;
   font-size: 90%;
 }
@@ -352,6 +185,7 @@ body:lang(zh) {
 }
 
 blockquote {
+  border: thin solid var(--color-border);
   padding: 1rem;
 }
 
@@ -366,19 +200,23 @@ img {
 }
 
 figcaption {
+  color: var(--color-figcaption);
   text-align: center;
   opacity: 0.5;
 }
 
 details {
+  border: thin solid var(--color-border);
   padding: 1rem;
 }
 
 details summary {
+  color: var(--color-text);
   text-decoration: none;
 }
 
 details[open] summary {
+  border-bottom: 1px solid var(--color-border);
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -396,5 +234,6 @@ details[open] summary {
 }
 
 .toc {
+  border: thin solid var(--color-border);
   padding: 1rem;
 }

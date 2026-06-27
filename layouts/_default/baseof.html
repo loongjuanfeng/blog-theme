@@ -1,12 +1,15 @@
+{{- $config := partial "theme_config.html" . -}}
 <!DOCTYPE html>
-<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction "ltr" }}">
-    {{- partial "head.html" . -}}
-    <body a="{{ site.Params.theme_config.appearance | default "auto" }}">
-        <main class="page-content" aria-label="Content">
-            <div class="w">
-                {{- block "main" . }}{{- end }}
-                {{ partial "footer.html" . }}
-            </div>
-        </main>
-    </body>
+<html lang="{{ site.Language.Locale | default site.Language.Lang | default "en" }}" dir="{{ site.Language.Direction | default "ltr" }}">
+{{- partial "head.html" . }}
+<body a="{{ $config.appearance }}">
+    <main class="page-content" aria-label="Content">
+        <div class="w">
+            {{- block "header" . }}{{ end }}
+            {{- block "main" . }}{{ end }}
+            {{- block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+        </div>
+    </main>
+    {{- partial "scripts.html" . }}
+</body>
 </html>

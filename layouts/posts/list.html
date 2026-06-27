@@ -1,21 +1,25 @@
-{{ define "main" }}
+{{ define "header" }}
+{{ partial "page_meta.html" . }}
+{{ end }}
 
+{{ define "main" }}
 <h1>{{ .Title }}</h1>
 
 {{ .Content }}
 
-<!-- divide post list by year  -->
-{{ if  .Site.Params.theme_config.isListGroupByDate  }}
+{{- $config := partial "theme_config.html" . -}}
+{{ if $config.isListGroupByDate }}
     {{ range .Pages.GroupByDate "2006 Year" }}
-    <p>{{ .Key }}</p>
-    <ul>
-        {{ range .Pages }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
-    </ul>
+        <p>{{ .Key }}</p>
+        <ul>
+            {{ range .Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
     {{ end }}
 {{ else }}
-    {{ partial "post_list.html" (dict "context" . "section" .Section)}}
+    {{ partial "post_list.html" (dict "context" . "section" .Section) }}
+{{ end }}
 {{ end }}
 
-{{ end }}
+{{ define "footer" }}{{ "" }}{{ end }}

@@ -1,4 +1,5 @@
-<details {{ if eq (.Get "open" | default "false") "true" }}open{{ end }}>
+{{- $open := printf "%v" (.Get "open" | default false) -}}
+<details{{ if eq $open "true" }} open{{ end }}>
     <summary>
         {{ .Get "summary" | default "Details:" }}
     </summary>

@@ -1,0 +1,10 @@
+{{- with .Params.custom_js -}}
+    {{- range . -}}
+        {{- with resources.Get (printf "js/%s.js" .) -}}
+            {{- $script := . | resources.Minify | resources.Fingerprint "sha512" -}}
+            <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+        {{- else -}}
+            {{- warnf "custom_js asset %q not found" . -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}

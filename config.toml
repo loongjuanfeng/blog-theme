@@ -42,3 +42,4 @@ hasCJKLanguage = true
     date_format       = "2006-01-02"
     isListGroupByDate = false
     isShowFooter      = true
+    show_description  = false
